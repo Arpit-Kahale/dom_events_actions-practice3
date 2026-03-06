@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn{
+            background-color: antiquewhite;
+            text-decoration: solid;
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <button id="clickme">CLICK</button>
+
+<p id="para"></p>
+
+    <script>
+        let i=0;
+        const button=document.getElementById("clickme")
+        button.onclick=function(){
+            if(i===4){
+                alert("you reached the the limit")
+                return;
+            }
+            alert(10+20)
+            button.classList.add("btn")
+           const name = document.createElement("p")
+            name.textContent="he boyy this arpitttt"
+          document.getElementById("para").appendChild(name)
+          i++
+        }
+    </script>
+</body>
+</html>
