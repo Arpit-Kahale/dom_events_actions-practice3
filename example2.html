@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">Addtocart</button>
+    <p>Toatal cart items: <span id="itmes">0
+    </span></p>
+    
+    <script>
+        //cart count
+        let count=0;
+     // queryy  the elements
+     const btn=document.getElementById("btn")
+     const items=document.getElementById("itmes")
+     
+     // click btn 
+     btn.addEventListener("click",function(){
+        if(count===10){
+            alert("you reached the limit")
+            return;
+        }
+        count++
+        items.textContent=count;
+     })
+    </script>
+</body>
+</html>
