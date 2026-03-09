@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events Demo</title>
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+  #box {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+    margin: 50px auto;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+</style>
+</head>
+<body>
+
+<div id="box">Hover / Click Me</div>
+<script>
+
+    const box=document.getElementById("box")
+    box.addEventListener("click",function(){
+        box.style.background="green"
+    })
+    box.addEventListener("dblclick",function(){
+        box.style.background="orange"
+    })
+    box.addEventListener("mouseenter",function(){
+        box.style.background="pink"
+    })
+     box.addEventListener("mouseleave",function(){
+       box.style.background="blue"
+    })
+</script>
