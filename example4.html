@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+    
+     <div id="products">
+         <button style="padding: 10px;margin-bottom: 10px;border-radius: 10%;background-color:rgb(170, 170, 207);font-size: large;font-weight: 100;font-family: Arial, Helvetica, sans-serif;">mens products</button>
+    <div id="list" style="display: none;"> 
+        <p>T-shirt</p>
+        <p>shorts</p>
+        <p>pants</p>
+        <p>cap</p>
+        <p>cargo</p>
+
+    </div>
+</div>
+<div id="dropdown">
+    <button style="padding: 10px;margin-bottom: 10px;border-radius: 10%;background-color:rgb(170, 170, 207);font-size: large;font-weight: 100;font-family: Arial, Helvetica, sans-serif;">menu bar</button>
+    <div id="itmes" style="display: none;">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">about us</a></li>
+        </ul>
+
+    </div>
+
+</div>
+
+    <script>
+         const products=document.getElementById("products");
+        const list=document.getElementById("list")
+       
+        products.addEventListener("mouseover",function(){
+                list.style.display="block"
+        })
+          products.addEventListener("mouseleave",function(){
+                list.style.display="none"
+        })
+
+
+    </script>
+    <script>
+
+        const dropdown=document.getElementById("dropdown")
+        const itmes=document.getElementById("itmes")
+
+        dropdown.addEventListener("mouseover",function(){
+            itmes.style.display="block";
+        })
+          dropdown.addEventListener("mouseleave",function(){
+                itmes.style.display="none"
+        })
+    </script>
+</body>
+</html>
