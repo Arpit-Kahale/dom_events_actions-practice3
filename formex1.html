@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter your username" id="username">
+    <p>live previvew: <span id="previvew"></span></p>
+
+    <script>
+    const username=document.getElementById("username").addEventListener("input",function(){
+        document.getElementById("previvew").textContent=this.value
+    })
+
+    </script>
+    <form id="myform">
+<input type="email" placeholder="enter your email" id="email">
+<button type="reset">Reset Button</button>
+<button type="submit">Submit Button</button>
+</form>
+<p id="massage">
+
+</p>
+
+<script>
+    let email=document.getElementById("email").addEventListener("change",function(){
+      const msg=document.getElementById("massage")
+
+         if(this.value.includes("@")){
+            msg.textContent="Valid Email"
+            msg.style.color="green"
+         }
+         else{
+            msg.textContent="Invalid Email"
+             msg.style.color="red"
+         }
+    })
+     document.getElementById("email").addEventListener("focus",function(){
+      this.style.background="gray"
+     })
+    
+    let myform=document.getElementById("myform").addEventListener("reset",function(){
+      const msg=document.getElementById("massage")
+      msg.textContent="email has been reseted"
+            
+    })
+
+</script>
+</body> 
+</html>
